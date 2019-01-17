@@ -11,7 +11,8 @@ namespace Driver
     {
         static void Main(string[] args)
         {
-            Multiply.Test();
+            //Multiply.Test();
+            SpiralOrder.Test();
             Console.ReadKey();
 
             
