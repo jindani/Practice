@@ -53,6 +53,10 @@
       <Project>{60151902-ddf8-4ab9-9fa9-8c3e57f559d4}</Project>
       <Name>Arrays</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LeetCode\LeetCode.csproj">
+      <Project>{784ac375-b156-4cf0-a3f6-d0e64d90be34}</Project>
+      <Name>LeetCode</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
