@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver", "Driver\Driver.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{60151902-DDF8-4AB9-9FA9-8C3E57F559D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCode.csproj", "{784AC375-B156-4CF0-A3F6-D0E64D90BE34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode", "LeetCode\LeetCode.csproj", "{784AC375-B156-4CF0-A3F6-D0E64D90BE34}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{E46E8D4F-5AF8-4BF0-B4DC-F32B7631855B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritenceDemo", "InheritenceDemo\InheritenceDemo.csproj", "{D92600AD-C402-40F7-AC94-E034860A6E11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{784AC375-B156-4CF0-A3F6-D0E64D90BE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{784AC375-B156-4CF0-A3F6-D0E64D90BE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{784AC375-B156-4CF0-A3F6-D0E64D90BE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46E8D4F-5AF8-4BF0-B4DC-F32B7631855B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46E8D4F-5AF8-4BF0-B4DC-F32B7631855B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46E8D4F-5AF8-4BF0-B4DC-F32B7631855B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46E8D4F-5AF8-4BF0-B4DC-F32B7631855B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92600AD-C402-40F7-AC94-E034860A6E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92600AD-C402-40F7-AC94-E034860A6E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92600AD-C402-40F7-AC94-E034860A6E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92600AD-C402-40F7-AC94-E034860A6E11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
