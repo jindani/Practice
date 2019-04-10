@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,6 +57,14 @@
     <ProjectReference Include="..\LeetCode\LeetCode.csproj">
       <Project>{784ac375-b156-4cf0-a3f6-d0e64d90be34}</Project>
       <Name>LeetCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Misc\Misc.csproj">
+      <Project>{44e4e55f-e51e-4a54-ba42-2c056322c8b9}</Project>
+      <Name>Misc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uber\Uber.csproj">
+      <Project>{8e1e7d7b-f8c7-44ea-a96f-5a78986f371e}</Project>
+      <Name>Uber</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{e46e8d4f-5af8-4bf0-b4dc-f32b7631855b}</Project>

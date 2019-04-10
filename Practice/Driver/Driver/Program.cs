@@ -1,11 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-using Arrays;
-using LeetCode;
 namespace Driver
 {
     class Program
@@ -17,6 +12,8 @@ namespace Driver
                 return (int)x - (int)y;
             }
         }
+
+        
         static void Main(string[] args)
         {
             //Multiply.Test();
@@ -31,7 +28,8 @@ namespace Driver
                 Console.WriteLine(q.ExtractMin());
             }*/
 
-            MergeSortLinkedList.Test();
+            //Uber.First.Test();
+            Console.WriteLine(Utils.SuffixArray.Get(new int[] { 3,2,3,4,1}));
             Console.ReadKey();
         }
     }

@@ -103,10 +103,31 @@ namespace InheritenceDemo
             f.Read(read, 0, 5);
             for (int i = 0; i < 5; i++)
                 Console.WriteLine(read[i]);
+           
+
+            using (BinaryWriter str = new BinaryWriter(new FileStream("D:\\test.txt", FileMode.Create)))
+            {
+                str.Write(true);
+                str.Write("Abc");
+                str.Write("Xyz");
+            }
+            using (BinaryReader str = new BinaryReader(new FileStream("D:\\test.txt", FileMode.Open)))
+            {
+                Console.WriteLine(str.ReadBoolean());
+                
+                if (str.BaseStream.Position == str.BaseStream.Length)
+                {
+                    Console.WriteLine("Endding file");
+                }
+                //Span<char> span = new Span<char>();
+
+            }
         }
         static void Main(string[] args)
         {
-            IODemo();
+            //IODemo();
+            ItteratorDemo.Test();
+
             Console.ReadLine();
 
         }
