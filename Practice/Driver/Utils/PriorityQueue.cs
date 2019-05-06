@@ -1,24 +1,45 @@
 ﻿using System;
 using System.Collections;
-
+using System.Collections.Generic;
 
 namespace Utils
 {
-    public class PriorityQueue<T> where T:IComparable<T>
+    public class PriorityQueue<T>
     {
         int len;
         T[] a;
-        IComparer comparer;
+        IComparer<T> comparer;
+        private static readonly int DEFAULT_INITIAL_CAPACITY = 11;
+
+        public int Count
+        {
+            get
+            {
+                return len;
+            }
+        }
+        public PriorityQueue() : this(null,null)
+        {
+        }
 
         public PriorityQueue(T[] a) : this(a, null)
         {
-            
-            
         }
-        public PriorityQueue(T[] a, IComparer comparer)
+        public PriorityQueue(T[] a, IComparer<T> comparer)
         {
-            this.comparer = comparer;
-            this.a = a;
+            this.comparer = comparer ?? Comparer<T>.Default;
+            if (a == null || a.Length == 0)
+            {
+                this.a = new T[DEFAULT_INITIAL_CAPACITY];
+                return;
+            }
+
+            this.a = new T[a.Length];
+            for(int i = 0;i<a.Length;i++)
+            {
+                this.a[i] = a[i];
+            }
+
             len = a.Length;
             
             if (a.Length != 0)
@@ -26,6 +47,10 @@ namespace Utils
                 BuildHeap();
             }
 
+        }
+
+        public PriorityQueue(Comparer<T> @default)
+        {
         }
 
         private void BuildHeap()
@@ -51,7 +76,7 @@ namespace Utils
             a[len] = item;
             int parent = (len - 1) / 2;
             int c = len;
-            while(parent >= 0 && (comparer != null ? comparer.Compare(a[parent], a[c]) > 0 : a[parent].CompareTo(a[c]) > 0))
+            while(parent >= 0 && comparer.Compare(a[parent], a[c]) > 0)
             {
                 T temp = a[parent];
                 a[parent] = a[c];
@@ -79,11 +104,11 @@ namespace Utils
             int l = i * 2 + 1;
             int r = i * 2 + 2;
             int largest = i;
-            if(l<len && (comparer!=null?comparer.Compare(a[i],a[l])>0:a[i].CompareTo(a[l])>0))
+            if(l<len && comparer.Compare(a[i],a[l])>0)
             {
                 largest = l;
             }
-            if(r<len && (comparer != null ? comparer.Compare(a[largest], a[r]) > 0 : a[largest].CompareTo(a[r]) > 0))
+            if(r<len && comparer.Compare(a[largest], a[r]) > 0)
             {
                 largest = r;               
             }
