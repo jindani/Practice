@@ -21,8 +21,8 @@ namespace Driver
        
         static void Main(string[] args)
         {
-            LeetDP.Test();
-            //Misc.PrintRepeat.Test();
+            //LeetCode.ReversePair.Test();
+            LeetCode.Candy.Test();
             /*int[] a = { 5, 4,6, 2, 1 };
             IComparer<int> comparer = new IntComparer();
             Utils.PriorityQueue<int> q = new Utils.PriorityQueue<int>(a,comparer);

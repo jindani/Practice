@@ -11,11 +11,11 @@ namespace Misc
             int n = s.Length;
             int start = 0;
             int end = n / 3;
-            while(start < end)
+            while (start < end)
             {
                 int mid = start + (end - start) / 2;
 
-                if(s[mid*3] == s[mid*3+1] && s[mid*3+2] == s[mid*3])
+                if (s[mid * 3] == s[mid * 3 + 1] && s[mid * 3 + 2] == s[mid * 3])
                 {
                     start = mid + 1;
                 }
@@ -24,12 +24,12 @@ namespace Misc
                     end = mid;
                 }
             }
-            return s[start*3]-'0';
+            return s[start * 3] - '0';
         }
 
         public static void Test()
         {
-            Console.WriteLine(GetMissing("11"));
+            Console.WriteLine(GetMissing("11122"));
         }
     }
 }
