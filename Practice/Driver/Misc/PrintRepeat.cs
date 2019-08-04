@@ -105,7 +105,7 @@ namespace Misc
             return res;
         }
 
-        public static void Evaluate(List<Object> infix)
+        public static List<String> Evaluate(List<Object> infix)
         {
             Stack<List<String>> stack = new Stack<List<string>>();
 
@@ -114,7 +114,9 @@ namespace Misc
                 if(ob is char)
                 {
                     List<String> b = stack.Pop();
-                    List<String> a = stack.Pop();
+                    List<String> a =stack.Count > 0?stack.Pop(): new List<string>();
+                    if (a.Count == 0)
+                        a.Add("");
                     char c =(char)ob;
                     if (c == '.')
                     {
@@ -136,6 +138,7 @@ namespace Misc
             {
                 Console.WriteLine(s);
             }
+            return res;
         }
 
         private static List<string> Concat(List<string> a, List<string> b)
@@ -244,7 +247,7 @@ namespace Misc
             foreach (var ss in res)
                 Console.WriteLine(ss);*/
 
-            String s = "a{a,b,c,d,e,f,g{a,b,c,d,e,f,g}}";
+            String s = "{a,b}{c{d,e}}";
             RepeateInfix(s);
         }
         public static void Test()

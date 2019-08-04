@@ -96,7 +96,13 @@ namespace Utils
                 len--;
                 return res;
             }
-            return default(T);
+            throw new IndexOutOfRangeException();
+        }
+        public T Peek()
+        {
+            if (len > 0)
+                return a[0];
+            throw new IndexOutOfRangeException();
         }
 
         private void Heapyfy(int i)
